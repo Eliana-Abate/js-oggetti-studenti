@@ -41,8 +41,8 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 
 //TODO 1. Creo variabile array e descrivo gli oggetti all'interno dell'array
 //TODO 2. Creo ciclo FOR per stampare ogni oggetto dell'array
-//TODO 3. Creo funzione per chiedere all'utente di inserire nuovi oggetti studenti
-//TODO 4. Aggiungo funzione all'array
+//TODO 3. Creo variabili per chiedere all'utente di inserire le proprietà dei nuovi oggetti studenti
+//TODO 4. Aggiungo oggetto all'array
 
 
 //! 1. 
@@ -66,3 +66,19 @@ for (var i = 0; i < studentClass.length; i++) {
 }
 
 displayStudent.innerHTML = fullName;
+
+
+//! 3.
+var nameChoice = prompt('Inserisci il nome dello studente');
+var surnameChoice = prompt('Inserisci il cognome dello studente');
+var ageChoice = prompt('Inserisci l\'età dello studente');
+
+var newStudent = {
+    newStudentName: nameChoice,
+    newStudentSurname: surnameChoice,
+    newStudentAge: ageChoice,
+};
+
+console.log(newStudent);
+
+studentClass.push(newStudent);
