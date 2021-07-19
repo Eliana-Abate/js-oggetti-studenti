@@ -43,6 +43,7 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 //TODO 2. Creo ciclo FOR per stampare ogni oggetto dell'array
 //TODO 3. Creo variabili per chiedere all'utente di inserire le proprietà dei nuovi oggetti studenti
 //TODO 4. Aggiungo oggetto all'array
+//TODO 5. Ricopio ciclo per vedere stampato il nuovo oggetto studente
 
 
 //! 1. 
@@ -74,11 +75,26 @@ var surnameChoice = prompt('Inserisci il cognome dello studente');
 var ageChoice = prompt('Inserisci l\'età dello studente');
 
 var newStudent = {
-    newStudentName: nameChoice,
-    newStudentSurname: surnameChoice,
-    newStudentAge: ageChoice,
+    studentName: nameChoice,
+    studentSurname: surnameChoice,
+    studentAge: ageChoice,
 };
 
 console.log(newStudent);
 
+
+//! 4.
 studentClass.push(newStudent);
+console.dir(studentClass);
+
+
+//! 5. 
+var displayNewList = document.getElementById('new-list'); 
+var newFullName = '';
+
+for (var i = 0; i < studentClass.length; i++) {
+    var newCurrentElement = studentClass[i];
+    newFullName += '<li>' + newCurrentElement.studentName  + ' ' + newCurrentElement.studentSurname + '</li>';
+}
+
+displayNewList.innerHTML = newFullName;
