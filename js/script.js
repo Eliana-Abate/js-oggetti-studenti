@@ -55,8 +55,14 @@ var studentClass = [
 
 
 //! 2. 
+var displayStudent = document.getElementById('es-2'); 
+var fullName = '';
+
 for (var i = 0; i < studentClass.length; i++) {
     var currentElement = studentClass[i];
     console.log("Stampo nome studente " + currentElement.studentName);
     console.log("Stampo cognome studente " + currentElement.studentSurname);
+    fullName += '<li>' + currentElement.studentName  + ' ' + currentElement.studentSurname + '</li>';
 }
+
+displayStudent.innerHTML = fullName;
