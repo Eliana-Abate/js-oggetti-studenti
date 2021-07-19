@@ -6,13 +6,15 @@ Stampare a schermo (in pagina) attraverso un ciclo for-in tutte le proprietà de
 //TODO 2. Creo ciclo FOR-IN per stampare 
 //TODO 3. Creo variabile per stampare in pagina
 
-
+console.log('ESERCIZIO 1');
 //! 1. 
 var student = {
     firstname: 'John',
     lastname: 'Doe',
     age: 20,
 };
+
+console.log(student);
 
 
 
@@ -28,9 +30,9 @@ for (var key in student) {
 displayObject.innerHTML = text;
 
 
+console.log('---------------------------------------');
 
-
-
+console.log('ESERCIZIO 2');
 
 //! Esercizio 2 ================================================================================================== 
 
@@ -42,9 +44,11 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 //TODO 1. Creo variabile array e descrivo gli oggetti all'interno dell'array
 //TODO 2. Creo ciclo FOR per stampare ogni oggetto dell'array
 //TODO 3. Creo variabili per chiedere all'utente di inserire le proprietà dei nuovi oggetti studenti
+   //! 3.1 - validazione
 //TODO 4. Aggiungo oggetto all'array
-//TODO 5. Ricopio ciclo per vedere stampato il nuovo oggetto studente
-
+//TODO 5. Rifaccio ciclo FOR per stampare il nuovo oggetto studente
+//TODO 6. Creo ciclo FOR-IN all'interno del nuovo ciclo FOR per stampare la proprietà 'età' del nuovo oggetto studente
+//TODO 7. Ristampo lista aggiornata
 
 //! 1. 
 var studentClass = [
@@ -70,9 +74,22 @@ displayStudent.innerHTML = fullName;
 
 
 //! 3.
-var nameChoice = prompt('Inserisci il nome dello studente');
-var surnameChoice = prompt('Inserisci il cognome dello studente');
-var ageChoice = prompt('Inserisci l\'età dello studente');
+var nameChoice;
+var surnameChoice;
+var ageChoice;
+
+    //! 3.1 - validazione
+    while (!nameChoice || !isNaN(nameChoice) || !nameChoice.trim()) {
+        nameChoice = prompt('Inserisci il nome dello studente').trim();
+    }
+
+    while (!surnameChoice || !isNaN(surnameChoice) || !surnameChoice.trim()) {
+        surnameChoice = prompt('Inserisci il cognome dello studente').trim();
+    }
+
+    while (!ageChoice || isNaN(ageChoice)) {
+        ageChoice = parseInt(prompt('Inserisci l\'età dello studente'));
+    }
 
 var newStudent = {
     studentName: nameChoice,
@@ -80,7 +97,6 @@ var newStudent = {
     studentAge: ageChoice,
 };
 
-console.log(newStudent);
 
 
 //! 4.
@@ -90,11 +106,20 @@ console.dir(studentClass);
 
 //! 5. 
 var displayNewList = document.getElementById('new-list'); 
-var newFullName = '';
+
 
 for (var i = 0; i < studentClass.length; i++) {
+    
     var newCurrentElement = studentClass[i];
-    newFullName += '<li>' + newCurrentElement.studentName  + ' ' + newCurrentElement.studentSurname + '</li>';
+   
+    //! 6.
+    for (var key in studentClass){
+        var newFullName = '';
+        var ageValue = '';
+        newFullName += '<li>' + newCurrentElement.studentName  + ' ' + newCurrentElement.studentSurname + ', età: ' + newCurrentElement.studentAge + ' anni' +  '</li>';
+    }
 }
 
-displayNewList.innerHTML = newFullName;
+
+//! 7.
+displayNewList.innerHTML = fullName + newFullName;
