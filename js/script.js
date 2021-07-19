@@ -46,7 +46,7 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 
 
 //! 1. 
-var class = [
+var studentClass = [
     {
         studentName: 'Luca',
         studentSurname: 'Verdi',
