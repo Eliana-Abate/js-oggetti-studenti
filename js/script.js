@@ -78,6 +78,7 @@ var nameChoice;
 var surnameChoice;
 var ageChoice;
 
+
     //! 3.1 - validazione
     while (!nameChoice || !isNaN(nameChoice) || !nameChoice.trim()) {
         nameChoice = prompt('Inserisci il nome dello studente').trim();
@@ -90,6 +91,7 @@ var ageChoice;
     while (!ageChoice || isNaN(ageChoice)) {
         ageChoice = parseInt(prompt('Inserisci l\'età dello studente'));
     }
+
 
 var newStudent = {
     studentName: nameChoice,
