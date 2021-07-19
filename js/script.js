@@ -47,23 +47,16 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 
 //! 1. 
 var studentClass = [
-    {
-        studentName: 'Luca',
-        studentSurname: 'Verdi',
-    },
-    
-    {
-        studentName: 'Maria',
-        studentSurname: 'Bianchi',
-    },
-
-    {
-        studentName: 'Dimitri',
-        studentSurname: 'Rossi',
-    },
-    
-    {
-        studentName: 'Gloria',
-        studentSurname: 'Neri',
-    },
+    {studentName: 'Luca', studentSurname: 'Verdi'},
+    {studentName: 'Maria', studentSurname: 'Bianchi'},
+    {studentName: 'Dimitri', studentSurname: 'Rossi'},
+    {studentName: 'Gloria', studentSurname: 'Neri'},
 ];
+
+
+//! 2. 
+for (var i = 0; i < studentClass.length; i++) {
+    var currentElement = studentClass[i];
+    console.log("Stampo nome studente " + currentElement.studentName);
+    console.log("Stampo cognome studente " + currentElement.studentSurname);
+}
