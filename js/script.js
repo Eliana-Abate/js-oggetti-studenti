@@ -18,8 +18,28 @@ var student = {
 
 //! 2. 
 var displayObject = document.getElementById('es-1');
+var text = '';
 
 for (var key in student) {
     console.log(key + ': ' + student[key]);
-    displayObject.innerHTML = '<li>' + student[key] + '</li>'
+    text += '<li>' + key + ': ' + student[key] + '</li>';
 }
+
+displayObject.innerHTML = text;
+
+
+
+
+
+
+//! Esercizio 2 ================================================================================================== 
+
+/*ES 2
+Creare un array di oggetti di studenti.
+Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
+Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.*/
+
+//TODO 1. Creo variabile array
+//TODO 2. Descrivo gli oggetti all'interno dell'array
+//TODO 3. Creo ciclo per stampare
+
