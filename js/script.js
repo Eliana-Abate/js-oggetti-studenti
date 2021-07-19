@@ -39,7 +39,31 @@ Creare un array di oggetti di studenti.
 Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
 Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.*/
 
-//TODO 1. Creo variabile array
-//TODO 2. Descrivo gli oggetti all'interno dell'array
-//TODO 3. Creo ciclo per stampare
+//TODO 1. Creo variabile array e descrivo gli oggetti all'interno dell'array
+//TODO 2. Creo ciclo FOR per stampare ogni oggetto dell'array
+//TODO 3. Creo funzione per chiedere all'utente di inserire nuovi oggetti studenti
+//TODO 4. Aggiungo funzione all'array
 
+
+//! 1. 
+var class = [
+    {
+        studentName: 'Luca',
+        studentSurname: 'Verdi',
+    },
+    
+    {
+        studentName: 'Maria',
+        studentSurname: 'Bianchi',
+    },
+
+    {
+        studentName: 'Dimitri',
+        studentSurname: 'Rossi',
+    },
+    
+    {
+        studentName: 'Gloria',
+        studentSurname: 'Neri',
+    },
+];
