@@ -46,7 +46,8 @@ Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo
 //TODO 3. Creo variabili per chiedere all'utente di inserire le proprietà dei nuovi oggetti studenti
    //! 3.1 - validazione
 //TODO 4. Aggiungo oggetto all'array
-//TODO 5. Rifaccio ciclo FOR per stampare la lista aggiornata con il nuovo oggetto studente
+//TODO 5. Creo nuova variabile per concatenare le stringhe con le proprietà del nuovo oggetto studente
+//! ALTERNATIVA 5.1. Rifaccio ciclo FOR per stampare la lista aggiornata con il nuovo oggetto studente
 //TODO 6. Stampo lista aggiornata in Html
 
 //! 1. 
@@ -107,20 +108,23 @@ console.dir(studentClass);
 
 //! 5. 
 var displayNewList = document.getElementById('new-list'); 
-var newFullName = '';
+var newFullName = '<li>' + newStudent.studentName + ' ' + newStudent.studentSurname + ', età: ' + newStudent.studentAge + ' anni' + '</li>';
 
-for (var i = 0; i < studentClass.length; i++) {
-    
-    var newCurrentElement = studentClass[i]
-    newFullName += '<li>';
+        //! 5.1. Altra soluzione per ristampare la lista aggiornata con il nuovo oggetto
+        /*
+        var newFullName = '';
+        for (var i = 0; i < studentClass.length; i++) {
+            
+            var newCurrentElement = studentClass[i]
+            newFullName += '<li>';
 
-    for(var key in newCurrentElement){
-        newFullName += newCurrentElement[key]  +  ' ';
-    }
-    newFullName += '</li>';
-}
-
+            for (var key in newCurrentElement){
+                newFullName += newCurrentElement[key]  +  ' ';
+            }
+            newFullName += '</li>';
+        }
+        */ 
 
 
 //! 7.
-displayNewList.innerHTML = newFullName;
+displayNewList.innerHTML = fullName + newFullName;
