@@ -79,11 +79,11 @@ var ageChoice;
 
 
     //! 3.1 - validazione
-    while (!nameChoice || !isNaN(nameChoice) || !nameChoice.trim()) {
+    while (!nameChoice || !isNaN(nameChoice) || !nameChoice.trim() === '') {
         nameChoice = prompt('Inserisci il nome dello studente').trim();
     }
 
-    while (!surnameChoice || !isNaN(surnameChoice) || !surnameChoice.trim()) {
+    while (!surnameChoice || !isNaN(surnameChoice) || !surnameChoice.trim() === '') {
         surnameChoice = prompt('Inserisci il cognome dello studente').trim();
     }
 
